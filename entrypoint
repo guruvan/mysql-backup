@@ -12,11 +12,12 @@ DB_DUMP_BEGIN=${DB_DUMP_BEGIN:-+0}
 # DB_DUMP_TARGET = where to place the backup file. Can be URL (e.g. smb://server/share/path) or just file path /foo
 DB_DUMP_TARGET=${DB_DUMP_TARGET:-/backup}
 # login credentials
+DBSERVER=${DB_HOST:-localhost}
 DBUSER=${DB_USER:-cattle}
 DBPASS=${DB_PASS:-cattle}
 
 # database server
-DBSERVER=db
+#DBSERVER=db
 
 # temporary dump dir
 TMPDIR=/tmp/backups
