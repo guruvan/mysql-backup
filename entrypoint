@@ -26,7 +26,10 @@ TMPRESTORE=/tmp/restorefile
 # this is global, so has to be set outside
 declare -A uri
 
-
+# check /var/run/mysqld/mysqld.sock
+# if we have it link to /run
+test -e /var/run/mysqld/mysqld.sock \
+  && ln -s /var/run/mysqld /run/mysqld
 
 #
 # URI parsing function
